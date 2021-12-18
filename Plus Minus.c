@@ -9,24 +9,21 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 int main()
 {
-    int n,i=0,j=0,hash=0,s;
+    int n,arr[100],i=0;
+    float b=0.0,c=0.0,a=0.0;
     scanf("%d",&n);
-    s=n-1;
     for(i=0;i<n;i++)
     {
-        
-        for(j=0;j<s;j++)
-        {
-            printf(" ");
-        }
-        s--;
-        hash += 1;
-        for(j=0;j<hash;j++)
-            printf("#");
-        printf("\n");
+        scanf("%d",&arr[i]);
+        if (arr[i]>0)
+            a++;
+        else if(arr[i]<0)
+            b++;
+        else 
+            c++;
     }
+    printf("%f\n%f\n%f\n",a/n,b/n,c/n);
     return 0;
 }
